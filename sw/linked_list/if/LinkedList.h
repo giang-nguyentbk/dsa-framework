@@ -7,17 +7,19 @@
 *
 */
 
-#ifndef __DSA_H__
-#define __DSA_H__
+#ifndef __DSA_LINKED_LIST_H__
+#define __DSA_LINKED_LIST_H__
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-
 #include <stdint.h>
 #include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
 
+#include "Node.h"
 
 struct LinkedList {
 	struct Node	*head;
@@ -42,9 +44,8 @@ struct LinkedList *linked_list_constructor(void (*free_node_data_func)(void *nod
 void linked_list_destructor(struct LinkedList **linkedlist);
 
 
-
 #ifdef __cplusplus
 }
 #endif
 
-#endif // __DSA_H__
+#endif // __DSA_LINKED_LIST_H__
